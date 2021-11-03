@@ -1,0 +1,7 @@
+{
+  "name": "controle_de_produtos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
