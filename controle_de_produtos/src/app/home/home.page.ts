@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { ProdutoService } from 'src/app/services/produto.service';
 type Produto = {
   nome: string;
 };
@@ -28,8 +29,12 @@ export class HomePage {
   public todosProdutos() {
     return this.produtos;
   }
-constructor(){
 
-}
+
+
+  constructor(private produtoService: ProdutoService) {
+    this.produtos = this.todosProdutos();
+
+  }
 
 }
