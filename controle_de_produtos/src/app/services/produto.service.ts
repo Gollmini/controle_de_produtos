@@ -1,15 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Storage } from '@ionic/storage';
+
+export interface Produtos {
+  nome: string;
+
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProdutoService {
- 
+
+  public produtos: Produtos[] = [];
+
+  constructor() { }
+  public novoProduto = null;
+  public todosProdutos() {
+    return this.produtos;
+  }
 
 
-  constructor(private storage: Storage) {  }
 
- 
-
-  
 }
