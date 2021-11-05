@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage';
+
 import { IonicStorageModule } from  '@ionic/storage-angular'
 import { ProdutoService } from 'src/app/services/produto.service';
 import { DatePipe} from '@angular/common';
 import { Key } from 'selenium-webdriver';
+import { stringify } from 'querystring';
 
 
 
@@ -24,9 +26,10 @@ export class HomePage {
   init() {
     this.storage.create();
   }
-  public salvar(key, nomeProduto: string){
+  public salvar(nomeProduto: string){
+    console.log("metodo salvar");
    
-    this.storage.set(key, nomeProduto);
+    this.storage.set("alexandre", nomeProduto);
 
   }
 
