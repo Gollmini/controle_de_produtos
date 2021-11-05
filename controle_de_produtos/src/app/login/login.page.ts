@@ -10,6 +10,11 @@ export class LoginPage implements OnInit {
 
 public userLogin: User = {};
 
+public limpar(){
+  this.userLogin.email = '';
+  this.userLogin.password = '';
+}
+
   constructor() { }
 
   ngOnInit() {

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-
+import { Storage } from '@ionic/storage';
+import { IonicStorageModule } from  '@ionic/storage-angular'
 import { ProdutoService } from 'src/app/services/produto.service';
-type Produto = {
-  nome: string;
-};
+import { DatePipe} from '@angular/common';
+import { Key } from 'selenium-webdriver';
+
+
 
 @Component({
   selector: 'app-home',
@@ -11,29 +13,20 @@ type Produto = {
   styleUrls: ['home.page.scss'],
 })
 
+
+
 export class HomePage {
-  public produtos: Produto[] = [{ nome: '' }];
-  public novoProduto = null;
-  public addProduto() {
-
+  
+ 
+  constructor(private produtoService: ProdutoService, public storage : Storage ) {
+    this.init(); 
+  }
+  init() {
+    this.storage.create();
+  }
+  public salvar(key, nomeProduto: string){
    
-   this.produtos.push({
-      nome: this.novoProduto,
-    }); this.novoProduto = '';
-  }
-
-  public removeProduto(toRemove: number) {
-    this.produtos.splice(toRemove, 1)
-  }
-
-  public todosProdutos() {
-    return this.produtos;
-  }
-
-
-
-  constructor(private produtoService: ProdutoService) {
-    this.produtos = this.todosProdutos();
+    this.storage.set(key, nomeProduto);
 
   }
 
