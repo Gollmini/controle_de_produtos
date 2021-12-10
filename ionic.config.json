@@ -1,5 +1,7 @@
 {
-  "name": "lista_produtos",
-  "integrations": {},
+  "name": "app-faculdade",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
