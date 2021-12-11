@@ -7,12 +7,18 @@ export const environment = {
 
   firebase:{
    
-    apiKey: "AIzaSyAvUgC34JE5uHBa83HggUFZh_Leq4ZlJHE",
-    authDomain: "controle-de-produtos-roger.firebaseapp.com",
-    projectId: "controle-de-produtos-roger",
-    storageBucket: "controle-de-produtos-roger.appspot.com",
-    messagingSenderId: "986313020283",
-    appId: "1:986313020283:web:0a437465d195737d6763de"
+    apiKey: "AIzaSyCgWC3zAoMBRG9TZ_5tkroYRIKxeQGQPlw",
+  authDomain: "app-de-lista-de-mercado.firebaseapp.com",
+  databaseURL: "https://app-de-lista-de-mercado.firebaseio.com",
+  projectId: "app-de-lista-de-mercado",
+  storageBucket: "app-de-lista-de-mercado.appspot.com",
+  messagingSenderId: "289513821691",
+  appId: "1:289513821691:web:bb710ef69eb643e8e1275e",
+  measurementId: "${config.measurementId}"
+    
+
+
+
     }
     
 };
